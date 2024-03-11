@@ -2,15 +2,15 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
       "/posts/welcome/index.html",
       "/posts/HW6/index.html",
       "/posts/HW5/index.html",
       "/posts/HW4/index.html",
       "/posts/HW3/index.html",
       "/posts/HW2/index.html",
+      "/posts/HW1/index.html",
       "/posts/bruin/index.html",
-      "/posts/HW1/index.html"
+      "/posts/post-with-code/index.html"
     ]
   }
 ]
