@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Coding-Tom-1405.github.io/Thomas-s-Blogs/posts/welcome/index.html</loc>
-    <lastmod>2024-03-11T07:16:21.168Z</lastmod>
-  </url>
-  <url>
     <loc>https://Coding-Tom-1405.github.io/Thomas-s-Blogs/posts/HW6/index.html</loc>
     <lastmod>2024-03-11T07:14:26.014Z</lastmod>
   </url>
@@ -18,7 +14,7 @@
   </url>
   <url>
     <loc>https://Coding-Tom-1405.github.io/Thomas-s-Blogs/posts/bruin/index.html</loc>
-    <lastmod>2024-03-11T07:26:52.583Z</lastmod>
+    <lastmod>2024-03-11T07:31:01.685Z</lastmod>
   </url>
   <url>
     <loc>https://Coding-Tom-1405.github.io/Thomas-s-Blogs/about.html</loc>
@@ -39,9 +35,5 @@
   <url>
     <loc>https://Coding-Tom-1405.github.io/Thomas-s-Blogs/posts/HW5/index.html</loc>
     <lastmod>2024-03-11T07:17:07.297Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Coding-Tom-1405.github.io/Thomas-s-Blogs/posts/post-with-code/index.html</loc>
-    <lastmod>2024-03-11T07:26:04.042Z</lastmod>
   </url>
 </urlset>
