@@ -336,8 +336,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Through this HTML, the game setting selection page looked like this</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/57e97243-7ed2-4c7a-b7b1-016eabef4b94-1-Game Settings.png" class="img-fluid figure-img"></p>
-<figcaption>Game%20Settings.png</figcaption>
+<p><img src="index_files/figure-html/fb1e9b9f-1-Game-Settings.png" class="img-fluid figure-img"></p>
+<figcaption>Game-Settings.png</figcaption>
 </figure>
 </div>
 <p>With this HTML, we can receive the user’s setting choices. However, for the user’s convenience, we also wanted to give the user a chance to confirm their choices or go back to make changes. Thus, we also wrote a <code>confirm.html</code> which displays their previous choices and also has a redirecting button to go back to the select page. In order to access the user’s settings to get <code>level</code> and <code>challenge</code> for this HTML file, however, we also needed to create another function <code>read_from_csv</code> to retrieve the data. Since this list is continuously appended by the <code>write_to_csv</code> function each time a player changes the settings, we want our function to only read the last line of the file, which we can do using indexing <code>-1</code>. Also, because there are two components for each row entry, we decided to use the <code>strip()</code> function to remove any whitespaces and then applied <code>split()</code> function on the ‘,’ delimiter to split the string into a list, assigning two variables for the level and challenge.</p>
@@ -425,7 +425,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
 <span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Through this HTML file, our confirmation page looks like this <img src="attachment:Confirm.png" class="img-fluid" alt="Confirm.png"></p>
+<p>Through this HTML file, our confirmation page looks like this</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/1e93b2c5-1-Confirm.png" class="img-fluid figure-img"></p>
+<figcaption>Confirm.png</figcaption>
+</figure>
+</div>
 <p>The last HTML file we needed to define was the <code>stats.html</code> which established the structure for our data visualization. For this, we want to access different PNG files established by our data visualization codes. So we used <code>img src</code> to access the <code>static</code> folder and then look for the specific <code>plotly.png</code> to display the plot. This is to get all three plots in one website, but we also made them appear as individual interactive plot tabs which we will discuss later.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>{% include 'menu.html' %}</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1088,8 +1094,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>However, after looking into it, we realized some JavaScript which we were now knowledgable of.</p>
 <p>The second method we used was Pygbag which was a package that would allow us to run python code directly in modern web browsers. To make the change in our Pygame code, all we had to do was make the main function defintion an asynchronous function definition (<code>async def main():</code>) and use <code>await asyncio.sleep(0)</code> to let other tasks run main by using <code>asyncio.run(main())</code>. However, while we were able to get the game to run in the website by redirecting the select page to the localhost (doing <code>redirect({localhost URL})</code>, we were not able to access the game setting or access the game data CSV files. We believe that this is because of the asynchronous coroutin nature of Pygbag which makes it not able to access local directoy files. Therefore, with the Professor’s permission, we made the two separate entities</p>
 <p>Now that we have finished our main.py, now all that’s left is to call <code>main()</code> at the bottom to have the actual game loop running once we call <code>python main.py</code> in the prompt. Our end product looked like this</p>
-<p>Memory Phase: <img src="index_files/figure-html/461d42a9-0a7d-4c00-9661-f5a1e81b9f7b-1-Memory Phase.png" class="img-fluid" alt="Memory%20Phase.png"></p>
-<p>Recall Phase: <img src="index_files/figure-html/9afc8562-1-Recall Phase.png" class="img-fluid" alt="Recall%20Phase.png"></p>
+<p>Memory Phase: <img src="index_files/figure-html/407690ba-1-Memory-Phase.png" class="img-fluid" alt="Memory-Phase.png"></p>
+<p>Recall Phase: <img src="index_files/figure-html/4221584e-1-Recall-Phase.png" class="img-fluid" alt="Recall-Phase.png"></p>
 </section>
 <section id="plotly-data-visualization-aspect" class="level1">
 <h1>Plotly (Data Visualization Aspect)</h1>
@@ -1144,8 +1150,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>With this set of code, we were able to generate this graph</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/8222ce88-6f17-4d03-af7d-0528b34ec1de-1-Max Level.png" class="img-fluid figure-img"></p>
-<figcaption>Max%20Level.png</figcaption>
+<p><img src="index_files/figure-html/d1f7f12b-1-Max-Level.png" class="img-fluid figure-img"></p>
+<figcaption>Max-Level.png</figcaption>
 </figure>
 </div>
 <p>From this graph, we can see that it has somewhat of a bell curve distribution which makes sense since we expect there to be a point where people struggle the most, in our case 6, and the earlier levels or further levels are less likely to be achieved, making their count smaller (For smaller values, it is less likely since they are easier to pass. For larger values, they are harder to reach).</p>
@@ -1173,8 +1179,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>With this set of code, we were able to generate this graph</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/0a7c8597-1-Average Time.png" class="img-fluid figure-img"></p>
-<figcaption>Average%20Time.png</figcaption>
+<p><img src="index_files/figure-html/a087398a-1-Average-Time.png" class="img-fluid figure-img"></p>
+<figcaption>Average-Time.png</figcaption>
 </figure>
 </div>
 <p>From this graph, we can see that the graph is exponentially increasing as we get more to the right, meaning the higher the level value is. This makes sense since at the beginning, there are less squares so there is less to remember and they are able to click on the squares easlier, spending less time. However, as they get further in the game, the levels get progressively harder since there is more that they need to memorizing, meaning they will most likely need to spend more time before actually starting the recall stage (which will also take longer since there are more squares to click and in case they forget during recall).</p>
@@ -1196,8 +1202,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>With this set of code, we were able to generate this graph</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/f4e87a07-1-Success Rate.png" class="img-fluid figure-img"></p>
-<figcaption>Success%20Rate.png</figcaption>
+<p><img src="index_files/figure-html/16d503ac-1-Success-Rate.png" class="img-fluid figure-img"></p>
+<figcaption>Success-Rate.png</figcaption>
 </figure>
 </div>
 <p>From this graph, we can see how there is a V-shaped distribution which does this make sense for two separate scenarios. For the lower levels, particularly levels 1-6 which is the left side of the max-level histogram, there is much more data since more games have reaches these level. Because it seems that the most amount of max level achieve is six, this should also mean that more game results for level 6 is “incorrect” rather than “correct”, and this can only increase the lower the levels from that point. For the higher levels, from 7-10 which is the right side of the max-level distribution, we can see an increase and that is because there are much less data entries, meaning the denominator is much lower when calculating percentage. For example, if there were two games that reached level 10, with one passing it to level 11, then there would only be a 50 percent success rate. However, in order to get to level 10, you have to pass level 9, 8, and 7, which means these have more data, meaning higher denominator with a small numerator still, resulting in a lower success rate.</p>
